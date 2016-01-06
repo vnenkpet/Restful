@@ -144,7 +144,7 @@ class ResourceRoute extends Route implements IResourceRouter
 		if (count($this->actionDictionary) > 0) {
 			$appRequest = clone $appRequest;
 			$params = $appRequest->getParameters();
-			$params['action'] = 'default'; // so the request matches with route with action dictionary
+//			$params['action'] = 'default'; // so the request matches with route with action dictionary
 			$appRequest->setParameters($params);
 		}
 
