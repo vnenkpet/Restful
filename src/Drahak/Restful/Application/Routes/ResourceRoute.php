@@ -155,7 +155,7 @@ class ResourceRoute extends Route implements IResourceRouter
 
 		$httpUrl = new Http\Url($url);
 		$httpUrl->query = Strings::replace($httpUrl->query, '/action=([a-zA-Z0-9_+%-]*)/i', '');
-		return $httpUrl->getBasePath() . $httpUrl->getRelativeUrl();
+		return $httpUrl->getAbsoluteUrl();
 	}
 
 	/**
