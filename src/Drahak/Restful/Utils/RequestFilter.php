@@ -148,6 +148,12 @@ class RequestFilter extends Object
 			);
 		}
 
+		if ($limit == 0) {
+			throw new InvalidStateException(
+				'Paginator limit cannot be null'
+			);
+		}
+
 		$paginator = new Paginator();
 		$paginator->setItemsPerPage($limit);
 		$paginator->setPage(floor($offset/$limit)+1);
